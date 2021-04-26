@@ -1,0 +1,10 @@
+---
+- name: file or directory permissions
+  hosts: "{{ host }}"
+
+  tasks:
+  - name: Touch the same file, but add/remove some permissions
+    file:
+      path: "{{ path }}"
+      state: "{{ state }}"
+      mode: u="{{ user }}",g="{{ group }}",o="{{ others }}"
