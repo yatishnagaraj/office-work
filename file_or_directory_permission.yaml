@@ -3,6 +3,10 @@
   hosts: "{{ host }}"
 
   tasks:
+  - name: debug the values of variables
+    debug:
+      msg:"{{ user }}, {{ group }}, {{ others }}"
+
   - name: Touch the same file, but add/remove some permissions
     file:
       path: "{{ path }}"
