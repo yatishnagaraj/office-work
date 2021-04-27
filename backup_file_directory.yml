@@ -11,3 +11,11 @@
       owner: vagrant
       group: vagrant
       mode: '0644'
+      backup: yes
+    when: backup | bool
+
+  - name: fetch/restore file/directory from backup server
+    fetch:
+      src: "{{ source_path }}"
+      dest: "{{ dest_path }}"
+    when: restore | bool
