@@ -1,6 +1,6 @@
 ---
 - hosts: "{{ host }}"
-  gather-facts: false
+  gather_facts: false
   
   tasks:
 
