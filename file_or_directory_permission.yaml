@@ -3,12 +3,8 @@
   hosts: "{{ host }}"
 
   tasks:
-  - name: debug the values of variables
-    debug:
-      msg: "{{ u }}, {{ g }}, {{ o }}"
-
   - name: Touch the same file, but add/remove some permissions
     file:
       path: "{{ path }}"
       state: "{{ state }}"
-      mode: u="{{ u }}",g="{{ g }}",o="{{ o }}"
+      mode: u={{ u }},g={{ g }},o={{ o }}
