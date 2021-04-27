@@ -1,0 +1,13 @@
+---
+- hosts: "{{ host }}"
+  gather-facts: false
+  
+  tasks:
+
+  - name: Copy/backup file/directories with owner and permissions
+    copy:
+      src: "{{ source_path }}"
+      dest: "{{ dest_path }}"
+      owner: vagrant
+      group: vagrant
+      mode: '0644'
