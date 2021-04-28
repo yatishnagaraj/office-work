@@ -9,8 +9,8 @@
     copy:
       src: "{{ source_path }}"
       dest: "{{ dest_path }}"
-      owner: vagrant
-      group: vagrant
+     # owner: vagrant
+     # group: vagrant
       mode: '0644'
       backup: yes
     when: backup | bool
