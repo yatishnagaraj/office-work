@@ -12,7 +12,6 @@
       owner: vagrant
       group: vagrant
       mode: '0644'
-      backup: yes
     when: backup_file | bool
 
   - name: Compress directory "{{ source_path }}" into "{{ dest_path }}"
