@@ -13,7 +13,13 @@
       group: vagrant
       mode: '0644'
       backup: yes
-    when: backup | bool
+    when: backup_file | bool
+
+  - name: Compress directory "{{ source_path }}" into "{{ dest_path }}"
+    archive:
+      path: "{{ source_path }}"
+      dest: "{{ dest_path }}"
+    when: backup_directory | bool
 
   - name: fetch/restore file/directory from backup server
     fetch:
