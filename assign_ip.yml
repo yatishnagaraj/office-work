@@ -16,7 +16,7 @@
   - name: Add an Ethernet connection with static IP configuration
     nmcli:
       conn_name: "{{ conn_name }}"
-      ifname: eth1
+      ifname: eth1:1
       type: ethernet
       ip4: "{{ ip_addr }}/24"
       state: "{{ act }}"
