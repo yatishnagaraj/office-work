@@ -10,8 +10,5 @@
       dest: "/etc/sysconfig/network-scripts/ifcfg-{{ interface }}"
 
   - name: make interface up
-    net_interface:
-      name: "{{ interface }}"
-      description: test-interface
-      enabled: True
+    command: "sudo ifup {{ interface }}"
     
