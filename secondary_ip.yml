@@ -10,5 +10,5 @@
       dest: "/etc/sysconfig/network-scripts/ifcfg-{{ interface }}"
 
   - name: make interface up
-    command: "sudo ifup {{ interface }}"
+    command: "ifup {{ interface }}"
     
