@@ -5,7 +5,7 @@
   
   tasks:
   - name: create a sub-interface config file
-    copy:
-      src: "/etc/sysconfig/network-scripts/ifcfg-{{ interface }}"
-      dest: "/etc/sysconfig/network-scripts/ifcfg-{{ interface }}:1"
-    delegate_to: localhost
+    template:
+      src: "/tmp/ifcfg-eth1:1.j2"
+      dest: "/etc/sysconfig/network-scripts/ifcfg-{{ interface }}"
+    
