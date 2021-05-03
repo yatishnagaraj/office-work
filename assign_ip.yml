@@ -9,5 +9,5 @@
       conn_name: "{{ conn_name }}"
       ifname: eth1
       type: ethernet
-      ip4: "{{ ip_addr }}"/24
+      ip4: "{{ ip_addr }}/24"
       state: "{{ action }}"
