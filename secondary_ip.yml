@@ -8,4 +8,10 @@
     template:
       src: "/tmp/ifcfg-eth1:1.j2"
       dest: "/etc/sysconfig/network-scripts/ifcfg-{{ interface }}"
+
+  - name: make interface up
+    net_interface:
+      name: "{{ interface }}"
+      description: test-interface
+      enabled: True
     
