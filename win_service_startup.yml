@@ -1,0 +1,11 @@
+---
+- hosts: "{{ host }}"
+  gather_facts: true
+  become: true
+
+  tasks:
+  - name: Set service startup mode to auto and ensure it is started
+    win_service:
+      name: spooler
+      start_mode: auto
+      state: started
