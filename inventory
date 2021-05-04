@@ -1,1 +1,12 @@
-192.168.33.20 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant ansible_become_pass=redhat
+[linux]
+lin1 ansible_host=192.168.33.20 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant ansible_become_pass=redhat
+
+[windows]
+win ansible_host=192.168.33.1
+
+[windows:vars]
+ansible_user=yathishnagaraj.yn@gmail.com
+ansible_password=Lakshmamma#1
+ansible_connection=winrm
+ansible_port=5986
+ansible_winrm_server_cert_validation=ignore
